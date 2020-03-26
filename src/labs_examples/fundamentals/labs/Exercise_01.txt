@@ -2,20 +2,72 @@ Fundamentals Exercise 1: CLI
      Perform the following tasks using the CLI and copy and paste the commands and results below
 
      1. Navigate to CodingNomads folder (or the space you have create for this project)
+     cd ~/Documents/codingnomads
      2. Create new folder Terminal_testing
+      mkdir Terminal_testing
      3. Inside of folder Terminal_testing,
          a. create 3 new .txt files all with different names
+
+         cd Terminal_testing
+          touch file1.txt
+          touch file2.txt
+          touch file3.txt
+
          b. print the directory path
+          pwd
+           /Users/FaridaB/Documents/codingnomads/Terminal_testing
+
+
          c. list the contents of the folder
+         ls -al
+         total 0
+         drwxr-xr-x  5 FaridaB  staff  160 Mar 24 00:23 .
+         drwxr-xr-x  9 FaridaB  staff  288 Mar 24 00:22 ..
+         -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:22 file1.txt
+         -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:23 file2.txt
+         -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:23 file3.txt
+
      5. Inside of folder Terminal_testing, create a new folder
+         mkdir newFolder
      6. Copy a file from Terminal_testing to the new folder
+       cp file1.txt newFolder
      7. Move a different file from Terminal_testing to the new folder
+       mv file2.txt newFolder
+       total 0
+       drwxr-xr-x  5 FaridaB  staff  160 Mar 24 00:28 .
+       drwxr-xr-x  9 FaridaB  staff  288 Mar 24 00:22 ..
+       -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:22 file1.txt
+       -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:23 file3.txt
+       drwxr-xr-x  4 FaridaB  staff  128 Mar 24 00:28 newFolder
      8. Demonstrate removing:
          a. A file
+            FaridaB@faridas-MacBook-Pro Terminal_testing % rm file3.txt
+            FaridaB@faridas-MacBook-Pro Terminal_testing % ls -al
+            total 0
+            drwxr-xr-x  4 FaridaB  staff  128 Mar 24 00:30 .
+            drwxr-xr-x  9 FaridaB  staff  288 Mar 24 00:22 ..
+            -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:22 file1.txt
+            drwxr-xr-x  4 FaridaB  staff  128 Mar 24 00:28 newFolder
          b. A folder
+          FaridaB@faridas-MacBook-Pro Terminal_testing % rm -r newFolder
+          FaridaB@faridas-MacBook-Pro Terminal_testing % ls -al
+          total 0
+          drwxr-xr-x  3 FaridaB  staff   96 Mar 24 00:30 .
+          drwxr-xr-x  9 FaridaB  staff  288 Mar 24 00:22 ..
+          -rw-r--r--  1 FaridaB  staff    0 Mar 24 00:22 file1.txt
+
      9. CHALLENGE:
          a. Use $ vim to write some text inside a file
+         vim file1.txt
+         press "i"
+         write "Hello Farida!!"
+         press "esc"
+         type ":wq"
+
          b. Use $ cat print contents of file
+         FaridaB@faridas-MacBook-Pro Terminal_testing % cat file1.txt
+         Hello Farida
+
          c. Use $ grep to search for a word inside file
 
 Example Output (pwd):
