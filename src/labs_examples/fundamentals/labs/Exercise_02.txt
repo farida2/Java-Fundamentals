@@ -33,20 +33,93 @@ Initializing git folder
         e. Practice the following git flow until you feel comfortable:
 
             i.   Create or modify file
-                
+
+            Creating a new file file4.txt:
+
+                FaridaB@faridas-MBP git_practice % touch file4.txt
+                FaridaB@faridas-MBP git_practice % ls -la
+                total 16
+                drwxr-xr-x   6 FaridaB  staff  192 Mar 26 22:21 .
+                drwxr-xr-x   9 FaridaB  staff  288 Mar 24 00:22 ..
+                drwxr-xr-x  13 FaridaB  staff  416 Mar 23 23:53 .git
+                -rw-r--r--   1 FaridaB  staff   15 Mar 23 23:49 README.md
+                -rw-r--r--   1 FaridaB  staff    0 Mar 26 22:21 file4.txt
+                -rw-r--r--   1 FaridaB  staff   17 Mar 23 23:55 newFile
+
+             Modifying file4.txt:
+
+                vim file4.txt
+                then ("i" to insert text the "esc" and ":wq" to go back to terminal)
+                FaridaB@faridas-MBP git_practice % cat file4.txt
+                this is file 4
+                making few changes!!
+
             ii.  Add file(s)
+
+                FaridaB@faridas-MBP git_practice % touch file5.txt file6.txt
+
             iii. Commit file(s)
+
+                FaridaB@faridas-MBP git_practice % git commit -m "second commit"
+                [master 2383ebc] second commit
+                 3 files changed, 2 insertions(+)
+                 create mode 100644 file4.txt
+                 create mode 100644 file5.txt
+                 create mode 100644 file6.txt
+
             iv.  Push file(s) to Github repository
+            FaridaB@faridas-MBP git_practice % git push farida master
+
 
 Adding a remote
+
     1. Create new personal repository on Github named "git_practice_2".
+        Inside  my GitHub create new repository : git_practice_2
+
     2. On local machine, add the new remote address to the same git repo you were working with in the previous section above
         (directions are provided on Github with new repo is created)
+        Following the directions bellow:
+            echo "# git_practice_2" >> README.md
+            git init
+            git add README.md
+            git commit -m "first commit"
+            git remote add origin https://github.com/farida2/git_practice_2.git
+
+
     3. Push local git repository to your Github using the new remote.
+         git push -u origin master
+
 
 Cloning repository from Github
+
+
     1. Find a repository on Github
+         Inside my GitHub : I will select one of the repositories
+
     2. Clone repository to local machine
+    Click "clone or download" button
+    Copy the link (clone with HTTPS)
+    Then inside the terminal :
+    Type % git clone https://github.com/farida2/testproject.git
+
+    FaridaB@faridas-MBP codingnomads % git clone https://github.com/farida2/testproject.git
+    Cloning into 'testproject'...
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), done.
+
+
     3. Create new repository on Github
+     Inside GitHub I created new repository "newRepos"
+
     4. Add new remote on local machine
+        echo "# newRepos" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git remote add origin https://github.com/farida2/newRepos.git
+
+
     5. Push to new Github repository
+        git push -u origin master
