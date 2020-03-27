@@ -69,6 +69,12 @@ Fundamentals Exercise 1: CLI
          Hello Farida
 
          c. Use $ grep to search for a word inside file
+            FaridaB@faridas-MBP terminal_testing % grep -c "hi" file1.txt
+            0
+
+            FaridaB@faridas-MBP terminal_testing % grep -c "Hello" file1.txt
+            1
+
 
 Example Output (pwd):
     1. Cadens-MacBook-Pro:CodingNomads cadenmackenzie$ pwd
