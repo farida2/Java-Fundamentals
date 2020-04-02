@@ -24,6 +24,14 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
+        int x = 10;
+        double y = x;
+        double z = 10.5;
+        int a = (int)z;
+        System.out.println("Widening " + y);
+        System.out.println("Narrowing " + a);
+
+
 
     }
 }
