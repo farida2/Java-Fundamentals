@@ -24,6 +24,11 @@ public class Exercise_01 {
         int number = scanner.nextInt();
 
         // write completed code here
-
+        if(number % 2 == 1){
+            System.out.println("number + \" is an odd number\" = " + number + " is an odd number");
+        }
+        else{
+            System.out.println("the number you entered is not an odd number");
+        }
     }
 }
