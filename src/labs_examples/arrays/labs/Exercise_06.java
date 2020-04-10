@@ -20,10 +20,21 @@ public class Exercise_06 {
         int temp;
 
         // Question: in the for loop below, why do we divide "nums.length" by 2?
-        for(int i = 0; i < nums.length / 2; i++){
+        // ?? for time complexity ?? not sure faster??
+
+        for(int i = 0; i < nums.length/2 ; i++){
             // swap elements at indexes in array
             // you have two indices readily available for you to use "i" (which increments) and "nums.length"
             // you've also got this "temp" variable you can use to hold a value temporarily
+
+            // at first iteration i = 0 => hold the value of nums[0] in temp = 45
+            temp = nums[i];
+            // nums[0] = will take the value of nums[7-0-1] =nums[6] means nums[0] holds value of 12
+            nums[i] = nums[nums.length -i -1 ];
+            // now nums[6] holds value of temp which is 45 then the next iteration
+            nums[nums.length - i - 1 ] = temp;
+
+
         }
         System.out.print("Contents of array after for loop - ");
         // print each element of the array to verify reverse order

@@ -3,7 +3,7 @@ package labs_examples.arrays.labs;
 /**
  *  2D Array
  *
- *      Creat and populate a 5x5 2D array with multiples of 3, starting with 3. Once populated, print out the results.
+ *      Create and populate a 5x5 2D array with multiples of 3, starting with 3. Once populated, print out the results.
  *
  *      The output should look something like this:
  *
@@ -21,10 +21,12 @@ public class Exercise_03 {
         int[][] twoDArray = new int[5][5];
         // use 2 for loops to populate the 2d array
         // first for loop
-        for (int innerLoop = 1; innerLoop < twoDArray.length; innerLoop++){
-            for (int outerLoop = 0; outerLoop < twoDArray[innerLoop].length; outerLoop++){
-                twoDArray[innerLoop][outerLoop] = innerLoop * 3;
-                System.out.print(twoDArray[outerLoop][innerLoop]);
+        int count = 3;
+        for (int i = 0; i < twoDArray.length; i++){
+            for (int j = 0; j < twoDArray[i].length; j++){
+                twoDArray[i][j] = count;
+                count += 3;
+                System.out.print(twoDArray[i][j] + " ");
             }
             System.out.println();
         }

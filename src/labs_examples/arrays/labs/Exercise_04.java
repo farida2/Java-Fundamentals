@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.Random;
+
 /**
  *  Irregular Arrays
  *
@@ -9,5 +11,23 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        int[][] twoDArray = new int[4][3];
+        int count = 0;
+        //populate twoDArray
+        for (int i = 0; i < twoDArray.length; i++) {
+            for (int j = 0; j < twoDArray[i].length; j++) {
+                twoDArray[i][j] = count;
+                count++;
 
+            }
+        }
+        //print out its elements using for-each
+        for(int[] row : twoDArray){
+            for(int col : row){
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+    }
 }

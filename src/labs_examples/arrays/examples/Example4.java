@@ -7,7 +7,7 @@ class ArrayErr {
         int i;
 
         // generate an array overrun
-        for(i = 0; i < 100; i = i+1)
+        for(i = 0; i < 10; i = i+1)
             sample[i] = i;
     }
 }
