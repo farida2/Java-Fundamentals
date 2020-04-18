@@ -23,9 +23,9 @@ public class Exercise_04 {
             }
         }
         //print out its elements using for-each
-        for(int[] row : twoDArray){
-            for(int col : row){
-                System.out.print(col + " ");
+        for(int[] arr : twoDArray){
+            for(int num : arr){
+                System.out.print(num + " ");
             }
             System.out.println();
         }

@@ -34,7 +34,6 @@ public class Exercise_06 {
             // now nums[6] holds value of temp which is 45 then the next iteration
             nums[nums.length - i - 1 ] = temp;
 
-
         }
         System.out.print("Contents of array after for loop - ");
         // print each element of the array to verify reverse order
