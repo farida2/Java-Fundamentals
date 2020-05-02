@@ -1,13 +1,63 @@
-
+// Check MethodTraining.java class file
 Create a new class called MethodTraining.java and in this class please do the following:
 
     1) Demonstrate method overloading in this class
+      The best exapmle is the : System.out.println()
+      println() is an example of overloading , many methods were created with the same name as println() method,
+      but they differ in the parameters types
+      System.out.println(23);
+      System.out.println("Overloading");
+
 
     2) Demonstrate the difference between "pass by value" and "pass by reference"
+       when passing an object data type by reference, which means that the method receives a reference to
+       location of the object in the memory , any change that happenes to the reference will affect the
+       original variable
+
+       Example:
+       we have an object type Car
+       Car carA = new Car("Red", "Nissan", "Rogue");
+       Car carB = carA; //here carB is a reference to carA
+       carB.setColor("Black"); // will change the color of CarA too
+
 
     3) Create a method that will return the largest of 4 numbers (all of which are passed in as arguments)
+       static int largestOfFour(int a, int b, int c, int d){
+               int max = 0;
+
+               if(a > b && a > c && a > d){
+                   max = a;
+               }
+               else if(b > c && b > d){
+                   max = b;
+               }
+               else if( c > d){
+                   max = c;
+               }
+               else{
+                   max = d;
+               }
+
+               return max;
+           }
 
     4) Write a method to count all consonants (the opposite of vowels) in a String
+    static int countConsonants(String string){
+            int count = 0;
+            String consonants = "aeiou";
+            for (int i = 0; i < string.length(); i++){
+                for(int j = 0; j < consonants.length(); j++){
+                    if(string.charAt(i) == consonants.charAt(j)){
+                        count++;
+                    }
+                }
+            }
+
+
+            return count;
+
+         }
+
 
     5) Write a method that will print some kind of ascii art to the console (Google "ascii art" if needed)
 
