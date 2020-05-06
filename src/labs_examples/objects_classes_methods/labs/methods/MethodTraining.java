@@ -69,11 +69,13 @@ public class MethodTraining {
         // 7) Write a method that will return a small array containing the highest and lowest numbers in a given numeric array,
         // which is passed in as an argument
 
-//    int[] newArr = {2,10,4,0,8,5};
-////        int[] anArr = highestLowestNumber(newArr);
-//        for(int i = 0; i < newArr.length; i++){
-//            System.out.print(newArr[i] + " ");
-//        }
+        int[] newArr = {0,17,44,9,31,5};
+       // highestLowestNumber(newArr);
+        int[] anArr = highestLowestNumber(newArr);
+        System.out.print("anArr = ");
+        for(int i = 0; i < anArr.length; i++){
+            System.out.print(anArr[i] + " ");
+        }
         System.out.println("----------------------------------");
 
 
@@ -83,7 +85,7 @@ public class MethodTraining {
           length of the returned list
 
         */
-        myMethod(30, 2,6);
+       // myMethod(30, 2,6);
 
 
         System.out.println("----------------------------------");
@@ -100,10 +102,6 @@ public class MethodTraining {
 
 
     }
-
-
-
-
 
 
 
@@ -182,22 +180,24 @@ public class MethodTraining {
     //7) Write a method that will return a small array containing the highest and lowest numbers in a given numeric array,
     //   which is passed in as an argument
 
-//    static int[] highestLowestNumber(int[] arr){
-//          int[] myArr = {};
-//          int highest = 0;
-//          int lowest = arr[0] ;
-//          for( int num : arr){
-//              if(num < lowest){
-//                 lowest = num;
-//              }
-//              else{
-//                  highest = num;
-//              }
-//          }
-//          myArr[0] = lowest;
-//          myArr[1] = highest;
-//          return myArr;
-//    }
+    static int[] highestLowestNumber(int[] arr){
+          int[] myArr = new int[2];
+          int highest = arr[0];
+          int lowest = arr[0] ;
+
+          for( int i = 0 ; i < arr.length; i++){
+              if(arr[i] > highest){
+                 highest = arr[i];
+              }
+              else if(arr[i] < lowest){
+                  lowest = arr[i];
+              }
+          }
+
+          myArr[0] = lowest;
+          myArr[1] = highest;
+          return myArr;
+    }
 
     /*
        8) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.

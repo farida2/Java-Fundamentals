@@ -87,6 +87,25 @@ Create a new class called MethodTraining.java and in this class please do the fo
 
     7) Write a method that will return a small array containing the highest and lowest numbers in a given numeric array,
             which is passed in as an argument
+            static int[] highestLowestNumber(int[] arr){
+                      int[] myArr = new int[2];
+                      int highest = arr[0];
+                      int lowest = arr[0] ;
+
+                      for( int i = 0 ; i < arr.length; i++){
+                          if(arr[i] > highest){
+                             highest = arr[i];
+                          }
+                          else if(arr[i] < lowest){
+                              lowest = arr[i];
+                          }
+                      }
+
+                      myArr[0] = lowest;
+                      myArr[1] = highest;
+                      return myArr;
+                }
+
 
 
 
@@ -94,6 +113,20 @@ Create a new class called MethodTraining.java and in this class please do the fo
         In this method create an Integer ArrayList and populate it with each number between zero and maxNum that is
         divisible by both divisor1 and divisor2. Then return this ArrayList. After calling this method, print out the
         length of the returned list
+        static void myMethod(int maxNum, int divisor1, int divisor2) {
+                    ArrayList<Integer> list = new ArrayList<Integer>();
+
+                    //populate list and check if the element is divisible by both divisor1 and divisor2
+                    for (int i = 0; i < maxNum ; i++) {
+
+                        if(i  % divisor1 == 0 && i  % divisor2 == 0){
+                            list.add(i);
+                        }
+                    }
+
+                    System.out.println(list.size());
+
+                }
 
 
     9) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
