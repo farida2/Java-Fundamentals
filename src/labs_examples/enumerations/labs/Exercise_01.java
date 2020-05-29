@@ -8,9 +8,15 @@ package labs_examples.enumerations.labs;
  *      of this enum from a seperate class.
  */
 
+// 1)
  enum PrimaryColors {
      Red, Blue, Yellow;
 
+}
+
+// 2)
+enum Shapes {
+     Square, Triangle, Rectangle, Circle;
 }
 
 

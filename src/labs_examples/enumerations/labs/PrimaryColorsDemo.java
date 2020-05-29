@@ -1,7 +1,7 @@
 package labs_examples.enumerations.labs;
 
 import java.util.Scanner;
-
+// 1) Answer 1:
 public class PrimaryColorsDemo {
     public static void main(String[] args) {
 
@@ -9,7 +9,7 @@ public class PrimaryColorsDemo {
         System.out.println("Enter your color 1 : ");
         Scanner inputColor = new Scanner(System.in);
         PrimaryColors color1 = PrimaryColors.valueOf(inputColor.next());
-        
+
         // Using Scanner ,  ask the user to enter a color2
         System.out.println("Enter your color  2: ");
         PrimaryColors color2 = PrimaryColors.valueOf(inputColor.next());
